@@ -11,18 +11,31 @@
 type A =
   | {
       type: "a";
-      a: string;
+      iDontCare: string;
     }
   | {
       type: "b";
-      b: string;
+      whatever: string;
     }
   | {
       type: "c";
-      c: string;
+      What: string;
     };
 
+const getUser = (a:A)=>{
+    if(a.type === "a"){
+        return a.iDontCare
+    }
+    if(a.type === "b"){
+        return a.whatever
+    }
+    if(a.type === "c"){
+        return a.What
+    }
+}
+
 type B = "a" | "b" | "c";
+
 
 enum C {
   A = "a",
