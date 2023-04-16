@@ -5,13 +5,13 @@ import { Equal, Expect } from '../helpers/type-utils';
  * https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions
  */
 export const programModeEnumMap = {
-	GROUP: 'group' as const,
-	ANNOUNCEMENT: 'announcement' as const,
-	ONE_ON_ONE: '1on1' as const,
-	SELF_DIRECTED: 'selfDirected' as const,
-	PLANNED_ONE_ON_ONE: 'planned1on1' as const,
-	PLANNED_SELF_DIRECTED: 'plannedSelfDirected' as const
-};
+	GROUP: 'group',
+	ANNOUNCEMENT: 'announcement',
+	ONE_ON_ONE: '1on1',
+	SELF_DIRECTED: 'selfDirected',
+	PLANNED_ONE_ON_ONE: 'planned1on1',
+	PLANNED_SELF_DIRECTED: 'plannedSelfDirected'
+} as const ;
 
 export type GroupProgram = typeof programModeEnumMap['GROUP'];
 export type AnnouncementProgram = typeof programModeEnumMap['ANNOUNCEMENT'];
